@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router} from '@angular/router';
+import { MovieService } from '../movie.service';
+
 
 @Component({
   selector: 'app-home',
-  template: `
-    <h2>Welcome to My App</h2>
-    <p>This is the home page of my app.</p>
-  `,
   styles: []
 })
 export class HomeComponent {
+  
 }
