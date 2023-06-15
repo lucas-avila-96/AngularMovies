@@ -18,6 +18,7 @@ export class UpdateMovieComponent implements OnInit {
     genre: null
   };
   error: string = "";
+  successMessage:string = "";
 
   constructor(
     private route: ActivatedRoute,
@@ -62,8 +63,7 @@ export class UpdateMovieComponent implements OnInit {
  updateMovie() {
   this.movieService.updateMovie(this.movieId, this.movieData).subscribe({
       next: () => {
-        // Lógica después de una actualización exitosa
-        this.router.navigate(['/movies', this.movieId]);
+        this.successMessage = 'Pelcula actualizada correctamente';
       },
       error: error => {
         this.error = 'Error al actualizar la película';

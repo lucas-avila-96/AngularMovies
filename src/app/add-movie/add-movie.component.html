@@ -28,6 +28,10 @@
 </div>
 
 <button class="btn btn-primary" (click)="addMovie()">Agregar</button>
-<div *ngIf="successMessage" class="success">{{ successMessage }}</div>
-<div *ngIf="error" class="error">{{ error }}</div>
+<div class="alert alert-success" role="alert" *ngIf="successMessage">
+  {{successMessage}}
+</div>
 
+<div class="alert alert-danger" role="alert" *ngIf="error">
+  {{error}}
+</div>

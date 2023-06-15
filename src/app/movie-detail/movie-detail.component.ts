@@ -34,23 +34,12 @@ export class MovieDetailComponent implements OnInit {
   }
 
   goToUpdateMovie(): void {
-    this.router.navigate(['/movies/update/', this.movie.id]);
+    this.router.navigate(['/movies', this.movie.id, 'update']);
   }
+
   goToDeleteMovie(): void {
-    if (this.movie.id) {
-      this.movieService.deleteMovie(this.movie.id).subscribe(
-        () => {
-          // Aquí puedes realizar alguna acción después de eliminar la película, como mostrar una notificación o redireccionar a otra página.
-          this.router.navigate(['/movies/delete/', this.movie.id])
-        },
-        error => {
-          console.error('Error al eliminar la película:', error);
-        }
-      );
-    } else {
-      console.warn('Debes proporcionar un ID de película');
-    }
+    this.router.navigate(['/movies', this.movie.id, 'delete']);
   }
-    // this.router.navigate(['/movies/delete/', this.movie.id])
+  
   }
 
