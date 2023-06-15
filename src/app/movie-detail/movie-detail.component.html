@@ -1,0 +1,15 @@
+<h2>Movie Details</h2>
+
+<div *ngIf="movie" class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">{{ movie.title }}</h5>
+    <p class="card-text">Year: {{ movie.year }}</p>
+    <p class="card-text">Duration: {{ movie.duration }}</p>
+    <p class="card-text">Synopsis: {{ movie.synopsis }}</p>
+    <p class="card-text">Genre: {{ movie.genre.name }}</p>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary" (click)="goToUpdateMovie()">Actualizar película</button>
+    <button class="btn btn-danger" (click)="goToDeleteMovie()">Eliminar</button>
+  </div>
+</div>

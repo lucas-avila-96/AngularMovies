@@ -1,0 +1,18 @@
+<div class="input-group mb-3">
+  <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Buscar películas...">
+  <button class="btn btn-primary" (click)="searchMovies()" (keyup.enter)="searchMovies()">Buscar</button>
+</div>
+
+<div class="row">
+  <div class="col-md-3" *ngFor="let movie of movies">
+    <div class="card mb-3" [routerLink]="['/movies', movie.id]" style="cursor: pointer;">
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.title }}</h5>
+        <p class="card-text">Year: {{ movie.year }}</p>
+        <p class="card-text">Duration: {{ movie.duration }}</p>
+        <p class="card-text">Synopsis: {{ movie.synopsis }}</p>
+      <p class="card-text">Genre: {{ movie.genre.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

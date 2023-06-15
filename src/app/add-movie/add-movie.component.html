@@ -1,0 +1,33 @@
+<h2>Agregar Película</h2>
+
+<div class="form-group">
+  <label for="title">Título:</label>
+  <input type="text" class="form-control" id="title" [(ngModel)]="movie.title">
+</div>
+
+<div class="form-group">
+  <label for="synopsis">Synopsis:</label>
+  <input type="text" class="form-control" id="synopsis" [(ngModel)]="movie.synopsis">
+</div>
+
+<div class="form-group">
+  <label for="year">Year:</label>
+  <input type="text" class="form-control" id="year" [(ngModel)]="movie.year">
+</div>
+
+<div class="form-group">
+  <label for="duration">Duration:</label>
+  <input type="text" class="form-control" id="duration" [(ngModel)]="movie.duration">
+</div>
+
+<div class="form-group">
+  <label for="genre">Género:</label>
+  <select class="form-select" aria-label="Seleccionar" [(ngModel)]="movie.genreId" id="genre" name="genreId">
+    <option *ngFor="let genre of genres" [value]="genre.id">{{ genre.name }}</option>
+  </select>
+</div>
+
+<button class="btn btn-primary" (click)="addMovie()">Agregar</button>
+<div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+

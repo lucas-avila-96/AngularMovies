@@ -1,0 +1,23 @@
+<div>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Mi API de Películas</a>
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="/" class="nav-link">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/movies" class="nav-link">Películas</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/movies/add" class="nav-link">Agregar Película</a>
+      </li>
+    </div>
+  </nav>
+</div>
+
+
+<div>
+  <div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>
