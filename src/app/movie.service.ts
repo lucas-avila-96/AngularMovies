@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   providedIn: 'root'
 })
 export class MovieService {
-  private urlMovies = 'http://localhost:8000/movies';
+  private urlMovies = 'https://localhost:7150/movies';
   private urlGenres = 'http://localhost:8000/genres';
 
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
